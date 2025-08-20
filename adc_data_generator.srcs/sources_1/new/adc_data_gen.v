@@ -1,6 +1,6 @@
 module adc_data_gen #(
     parameter real P_ADC_CLK_FREQ = 80.0,       // ADC clock freq in MHz (e.g., 80)
-    parameter real P_SINE_FREQ    = 5_000_000.0, // 5 MHz
+    parameter real P_SINE_FREQ    = 10_000_000.0, // 5 MHz
     parameter integer P_AMPLITUDE = 8191        // Amplitude (max 16383 for 14-bit full scale)
 )(
     output reg         o_adc_dco,      // ADC clock output

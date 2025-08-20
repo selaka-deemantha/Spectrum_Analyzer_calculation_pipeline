@@ -9,13 +9,13 @@
     "parameters": {
       "component_parameters": {
         "P_ADC_CLK_FREQ": [ { "value": "80", "resolve_type": "user", "format": "float", "usage": "all" } ],
-        "P_SINE_FREQ": [ { "value": "5000000", "resolve_type": "user", "format": "float", "usage": "all" } ],
+        "P_SINE_FREQ": [ { "value": "10000000", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "P_AMPLITUDE": [ { "value": "8191", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_adc_data_gen_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "P_ADC_CLK_FREQ": [ { "value": "80", "resolve_type": "generated", "format": "float", "usage": "all" } ],
-        "P_SINE_FREQ": [ { "value": "5000000", "resolve_type": "generated", "format": "float", "usage": "all" } ],
+        "P_SINE_FREQ": [ { "value": "10000000", "resolve_type": "generated", "format": "float", "usage": "all" } ],
         "P_AMPLITUDE": [ { "value": "8191", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
