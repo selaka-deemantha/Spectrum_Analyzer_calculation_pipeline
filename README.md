@@ -1,0 +1,63 @@
+#Setup Instruction
+
+This is the Petalinux project for fft data calculation pipline that use dma to send data to processor. Vivado project for this design is in the fft_dma_zybo_testing branch. Project is in working state. For petalinux project we have to update the system-user.dtsi as following
+
+```dts
+/include/ "system-conf.dtsi"
+/ {
+    reserved-memory {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        ranges;
+
+        fft_buffer: fft_buffer@01000000 {
+            reg = <0x01000000 0x00100000>; 
+            no-map;
+            phandle = <0x12>;
+        };
+    };
+
+    pl-bus {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        compatible = "simple-bus";
+        ranges;
+        phandle = <0x36>;
+
+        axi_dma_0: dma@40400000 {
+            compatible = "xlnx,axi-dma-1.00.a";
+            reg = <0x40400000 0x10000>;
+            #dma-cells = <1>;
+            clock-names = "s_axi_lite_aclk", "m_axi_s2mm_aclk";
+            clocks = <0x01 0x0f>, <0x01 0x0f>;
+            interrupt-names = "s2mm_introut";
+            interrupt-parent = <0x04>;
+            interrupts = <0x00 0x1d 0x04>;
+            xlnx,addrwidth = <0x20>;
+            xlnx,include-sg;
+            memory-region = <&fft_buffer>;
+            phandle = <0x37>;
+
+            dma_channel_s2mm: dma-channel@40400030 {
+                compatible = "xlnx,axi-dma-s2mm-channel";
+                dma-channels = <1>;
+                interrupts = <0 0x1d 4>;
+                xlnx,datawidth = <0x40>;
+                xlnx,device-id = <0x0>;
+            };
+        };
+
+        dmatest_0: dmatest@0 {
+            compatible = "dma_test,fft-dma";
+            dmas = <&axi_dma_0 1>;
+            dma-names = "axidma_s2mm";
+            status = "okay";
+        };
+    };
+};
+
+
+Here we need to use dma client to accessing dma. we need to set dmas = <&axi_dma_0 1>. Here we add dma and channel id. we should use 1 for s2mm and 2 for mm2s if used. 
+
+
+
