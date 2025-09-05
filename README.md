@@ -1,6 +1,9 @@
-#Setup Instruction
+# Setup Instruction
 
-This is the Petalinux project for fft data calculation pipline that use dma to send data to processor. Vivado project for this design is in the fft_dma_zybo_testing branch. Project is in working state. For petalinux project we have to update the system-user.dtsi as following
+This is the Petalinux project for the FFT data calculation pipeline that uses DMA to send data to the processor.  
+The Vivado project for this design is in the `fft_dma_zybo_testing` branch. The project is in a working state.  
+
+For the Petalinux project, we have to update the `system-user.dtsi` as follows:
 
 ```dts
 /include/ "system-conf.dtsi"
@@ -56,8 +59,17 @@ This is the Petalinux project for fft data calculation pipline that use dma to s
     };
 };
 
-
+```
 Here we need to use dma client to accessing dma. we need to set dmas = <&axi_dma_0 1>. Here we add dma and channel id. we should use 1 for s2mm and 2 for mm2s if used. 
 
+After this we need to generate Kernel header files for driver code. We can find kernel source from /build/tmp/work-shared/zynq-generic-7z010/kernel-source. We need to copy .config and Module.symvers from kernel-build-arfitacts to kernel-source. After that we need to source `environment-setup-cortexa9t2hf-neon-xilinx-linux-gnueabi` file from petalinux sdk. After that we need to run these commands in kernel-source direcotry
+
+```kernel_headers
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- scripts
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- prepare
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules_prepare
+
+```
+Now we can compile driver code in driver_code_fft. c_code is user space code for testing dma client driver and dma_client_driver contain driver code and make file. we need to change `KDIR := /home/selaka/petalinux/2024/zybo_test/build/tmp/work-shared/zynq-generic-7z010/kernel-source` this line to appropriate kernel source. after that run `make`
 
 
