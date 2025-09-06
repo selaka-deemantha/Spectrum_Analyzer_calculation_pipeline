@@ -1,0 +1,1 @@
+savedcmd_/home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/fft_dma.mod := printf '%s\n'   fft_dma.o | awk '!x[$$0]++ { print("/home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/"$$0) }' > /home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/fft_dma.mod

@@ -1,0 +1,1 @@
+savedcmd_/home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/Module.symvers :=  scripts/mod/modpost -M -m       -o /home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/Module.symvers -T /home/selaka/petalinux/2024/important_files/fft_code/dma_driver/dma_client_driver/modules.order -i Module.symvers -e 
