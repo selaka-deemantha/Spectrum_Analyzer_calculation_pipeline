@@ -14,8 +14,7 @@ module vco_interface #(
     output wire             vco_data,
     output reg              vco_prog_done,
     output reg [12:0]       output_freq,
-    output wire             bit_sending_out,
-    output wire [1:0]       current_state,
+    output wire [2:0]       current_state,
     output wire [31:0]      bit_cntr_out,
     output wire             clock_even_out,
 
@@ -35,7 +34,7 @@ localparam IDLE      = 3'b000;
 localparam SEND      = 3'b001;
 localparam WAIT_REG  = 3'b010;
 localparam WAIT_FREQ = 3'b011;
-localparam CONFIG    = 3'b100; // new AXIS config loading state
+localparam CONFIG_FREQ    = 3'b100; // AXIS config loading state
 
 reg [2:0] vco_state;
 
@@ -61,13 +60,11 @@ reg [31:0] axis_word_count;
 /////////////////////////////////////////////
 // Assign debug outputs
 /////////////////////////////////////////////
-assign current_state   = vco_state[1:0]; // only 2 bits for compatibility
-assign bit_sending_out = bit_send;
+assign current_state   = vco_state;
 assign bit_cntr_out    = vco_bit_cntr;
 assign clock_even_out  = clock_even;
 assign freq_counter    = vco_freq_cntr;
-
-assign vco_data = (vco_state == SEND && bit_send) ? r_vco_data : 1'b1;
+assign vco_data       = (vco_state == SEND && bit_send) ? r_vco_data : 1'b1;
 
 /////////////////////////////////////////////
 // AXIS Loader: preload frequency data asynchronously
@@ -77,7 +74,7 @@ always @(posedge s_axis_clk or posedge rst) begin
         axis_word_count <= 0;
         s_axis_ready    <= 1;
         config_loaded   <= 0;
-    end else if (vco_state == CONFIG) begin
+    end else if (vco_state == CONFIG_FREQ) begin
         if (s_axis_valid && s_axis_ready) begin
             freq_data[axis_word_count] <= s_axis_data;
             axis_word_count <= axis_word_count + 1;
@@ -107,6 +104,8 @@ always @(posedge clk) begin
         vco_freq_wait_cntr <= 0;
         bit_send           <= 0;
         clock_even         <= 0;
+        s_axis_ready       <= 0;
+        config_loaded      <= 0;
     end else begin
         case (vco_state)
             /////////////////////////////////////////////
@@ -114,17 +113,22 @@ always @(posedge clk) begin
             /////////////////////////////////////////////
             IDLE: begin
                 vco_prog_done <= 0;
-                if (s_axis_valid && s_axis_ready) begin
-                    // AXIS configuration request
+
+                // Handle new AXIS configuration request
+                if (s_axis_valid) begin
                     axis_word_count <= 0;
-                    vco_state <= CONFIG;
-                end else if (start && next_freq_req) begin
+                    config_loaded   <= 0; // clear previous flag
+                    s_axis_ready    <= 1;
+                    vco_state <= CONFIG_FREQ;
+                end
+                // Handle programming request
+                else if (start && next_freq_req && config_loaded) begin
                     if (vco_freq_cntr == VCO_FREQ_COUNT) begin
                         vco_freq_cntr <= 0;
                         vco_state <= IDLE;
                     end else begin
-                        vco_freq_cntr <= vco_freq_cntr + 1;
                         vco_state <= SEND;
+                        vco_freq_cntr <= vco_freq_cntr + 1;
                     end
                 end
             end
@@ -138,9 +142,7 @@ always @(posedge clk) begin
                 vco_clk    <= ~vco_clk;
                 bit_send   <= 1;
 
-                if (clock_even) begin
-                    vco_bit_cntr <= vco_bit_cntr + 1;
-                end
+                if (clock_even) vco_bit_cntr <= vco_bit_cntr + 1;
 
                 if (vco_bit_cntr == 24) begin
                     vco_bit_cntr <= 0;
@@ -186,14 +188,14 @@ always @(posedge clk) begin
             /////////////////////////////////////////////
             // CONFIG: load AXIS frequency data
             /////////////////////////////////////////////
-            CONFIG: begin
+            CONFIG_FREQ: begin
                 if (axis_word_count == VCO_REG_COUNT*VCO_FREQ_COUNT) begin
                     s_axis_ready <= 0;
                     config_loaded <= 1;
                     vco_state <= IDLE;
+                    vco_freq_cntr <= 0;
                 end
             end
-
         endcase
     end
 end
