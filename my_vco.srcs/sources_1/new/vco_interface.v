@@ -175,12 +175,19 @@ always @(posedge clk) begin
             // WAIT_FREQ: wait after sending all registers
             /////////////////////////////////////////////
             WAIT_FREQ: begin
-                if (vco_freq_wait_cntr == VCO_WAIT_FREQ_TIME) begin
+                if (vco_freq_wait_cntr == VCO_WAIT_FREQ_TIME && vco_freq_cntr == VCO_FREQ_COUNT) begin
                     vco_freq_wait_cntr <= 0;
                     vco_prog_done      <= 1'b1;
                     output_freq        <= vco_freq_cntr[12:0];
                     vco_state          <= IDLE;
-                end else begin
+                    vco_freq_cntr      <= 0;
+                end 
+                else if(vco_freq_wait_cntr == VCO_WAIT_FREQ_TIME) begin
+                    vco_state          <= SEND;
+                    vco_freq_cntr <= vco_freq_cntr + 1;
+                    
+                end
+                else begin
                     vco_freq_wait_cntr <= vco_freq_wait_cntr + 1;
                 end
             end

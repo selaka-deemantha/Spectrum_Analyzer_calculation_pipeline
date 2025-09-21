@@ -28,10 +28,12 @@ module tb_vco_interface;
     wire        config_loaded;
     wire [31:0] freq_counter;
 
+    integer i;
+
     // Instantiate DUT
     vco_interface #(
-        .VCO_REG_COUNT(4),     
-        .VCO_FREQ_COUNT(2),    
+        .VCO_REG_COUNT(46),
+        .VCO_FREQ_COUNT(100),
         .VCO_WAIT_REG_TIME(5),
         .VCO_WAIT_FREQ_TIME(20)
     ) uut (
@@ -61,15 +63,14 @@ module tb_vco_interface;
     // AXIS clk 50 MHz
     always #10 s_axis_clk = ~s_axis_clk;
 
-    integer i;
-
+    // Task to load a full frequency configuration via AXIS
     task load_axis_config(input [23:0] base_val);
         begin
-            for (i = 0; i < 4*2; i = i + 1) begin
+            for (i = 0; i < 46*100; i = i + 1) begin
                 @(posedge s_axis_clk);
                 s_axis_tdata  <= base_val + i;
                 s_axis_tvalid <= 1;
-                // Wait until DUT ready
+                // Wait for DUT ready
                 wait(s_axis_tready);
                 @(posedge s_axis_clk);
                 s_axis_tvalid <= 0;
@@ -77,6 +78,7 @@ module tb_vco_interface;
         end
     endtask
 
+    // Task to trigger a single frequency programming
     task trigger_start();
         begin
             @(posedge clk);
@@ -91,7 +93,9 @@ module tb_vco_interface;
     endtask
 
     initial begin
-        // Init
+        // -------------------------
+        // Initial signals
+        // -------------------------
         clk = 0;
         s_axis_clk = 0;
         rst = 1;
@@ -103,26 +107,36 @@ module tb_vco_interface;
         #50 rst = 0;
 
         // -------------------------
-        // First AXIS configuration
+        // Load first AXIS configuration
         // -------------------------
-        $display("Loading first configuration via AXIS...");
+        $display("Loading first frequency configuration set via AXIS...");
         load_axis_config(24'h100000);
         wait(config_loaded);
-        $display("First config loaded!");
-
-        // First two programming cycles
-        repeat(2) trigger_start();
+        $display("First configuration loaded at time %0t", $time);
 
         // -------------------------
-        // Second AXIS configuration
+        // Program first 5 frequencies
         // -------------------------
-        $display("Loading second configuration via AXIS...");
+        $display("Programming first 5 frequencies from first configuration...");
+        for (i = 0; i < 5; i = i + 1) begin
+            trigger_start();
+        end
+
+        // -------------------------
+        // Load second AXIS configuration
+        // -------------------------
+        $display("Loading second frequency configuration set via AXIS...");
         load_axis_config(24'h200000);
         wait(config_loaded);
-        $display("Second config loaded!");
+        $display("Second configuration loaded at time %0t", $time);
 
-        // Next two programming cycles
-        repeat(2) trigger_start();
+        // -------------------------
+        // Program first 5 frequencies from second configuration
+        // -------------------------
+        $display("Programming first 5 frequencies from second configuration...");
+        for (i = 0; i < 5; i = i + 1) begin
+            trigger_start();
+        end
 
         #200;
         $finish;
