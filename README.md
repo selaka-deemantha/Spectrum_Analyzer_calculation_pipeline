@@ -1,0 +1,1 @@
+This Vivado project includes a simulation setup for the FFT pipeline, where the power calculation is implemented on the FPGA. The simulation_script folder contains captured simulation data along with Python scripts for plotting. The FPGA outputs the power values in IEEE 754 floating-point format.
