@@ -1,0 +1,426 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Dec 29 00:48:29 2025
+# Process ID: 350645
+# Current directory: /home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: selaka-Inspiron-5502, OS: Linux, CPU Frequency: 1700.000 MHz, CPU Physical cores: 4, Host memory: 16480 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2589.961 ; gain = 0.000 ; free physical = 937 ; free virtual = 29535
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx_2021.2/Vivado/2021.2/data/ip'.
+add_files: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2700.039 ; gain = 110.078 ; free physical = 854 ; free virtual = 29518
+Command: synth_design -top design_1_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 350767
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 156 ; free virtual = 28587
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_AND_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AND_0_0' (1#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_AND_0_1' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AND_0_1' (2#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_AND_0_2' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AND_0_2' (3#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_AND_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_adc_data_gen_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_adc_data_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_data_gen_0_0' (4#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_adc_data_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_adc_interface_fft_vco_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_adc_interface_fft_vco_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_interface_fft_vco_0_0' (5#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_adc_interface_fft_vco_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_adc_vco_prog_freq' of module 'design_1_adc_interface_fft_vco_0_0' is unconnected for instance 'adc_interface_fft_vco_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:144]
+WARNING: [Synth 8-7023] instance 'adc_interface_fft_vco_0' of module 'design_1_adc_interface_fft_vco_0_0' has 13 connections declared, but only 12 given [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:144]
+INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_0_0' (6#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_1_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_1_0' (7#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_2_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_2_0' (8#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_3_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_3_0' (9#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_floating_point_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_vco_interface_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_vco_interface_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_vco_interface_0_0' (10#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_vco_interface_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xfft_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_xfft_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xfft_0_0' (11#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/.Xil/Vivado-350645-selaka-Inspiron-5502/realtime/design_1_xfft_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_config_tready' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_frame_started' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_tlast_unexpected' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_tlast_missing' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_status_channel_halt' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_data_in_channel_halt' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7071] port 'event_data_out_channel_halt' of module 'design_1_xfft_0_0' is unconnected for instance 'xfft_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+WARNING: [Synth 8-7023] instance 'xfft_0' of module 'design_1_xfft_0_0' has 18 connections declared, but only 11 given [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:217]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (12#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (13#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (14#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (15#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (15#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (16#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_2_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (16#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_2_0' (17#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_3_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_3_0' (18#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (19#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (20#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (20#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (21#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (22#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (23#1) [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7129] Port Din[63] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[62] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[61] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[60] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[59] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[58] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[57] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[56] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[55] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[54] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[53] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[52] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[51] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[50] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[49] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[48] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[47] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[46] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[45] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[44] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[43] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[42] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[41] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[40] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[39] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[38] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[37] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[36] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[35] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[34] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[33] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[32] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1187 ; free virtual = 28815
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1214 ; free virtual = 28837
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1214 ; free virtual = 28837
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1208 ; free virtual = 28832
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_data_gen_0_0/design_1_adc_data_gen_0_0/design_1_adc_data_gen_0_0_in_context.xdc] for cell 'design_1_i/adc_data_gen_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_data_gen_0_0/design_1_adc_data_gen_0_0/design_1_adc_data_gen_0_0_in_context.xdc] for cell 'design_1_i/adc_data_gen_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_vco_interface_0_0/design_1_vco_interface_0_0/design_1_vco_interface_0_0_in_context.xdc] for cell 'design_1_i/vco_interface_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_vco_interface_0_0/design_1_vco_interface_0_0/design_1_vco_interface_0_0_in_context.xdc] for cell 'design_1_i/vco_interface_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xfft_0_0/design_1_xfft_0_0/design_1_xfft_0_0_in_context.xdc] for cell 'design_1_i/xfft_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_xfft_0_0/design_1_xfft_0_0/design_1_xfft_0_0_in_context.xdc] for cell 'design_1_i/xfft_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0/design_1_floating_point_0_0_in_context.xdc] for cell 'design_1_i/floating_point_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0/design_1_floating_point_0_0_in_context.xdc] for cell 'design_1_i/floating_point_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_1_0/design_1_floating_point_1_0/design_1_floating_point_1_0_in_context.xdc] for cell 'design_1_i/floating_point_1'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_1_0/design_1_floating_point_1_0/design_1_floating_point_1_0_in_context.xdc] for cell 'design_1_i/floating_point_1'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_2_0/design_1_floating_point_2_0/design_1_floating_point_1_0_in_context.xdc] for cell 'design_1_i/floating_point_2'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_2_0/design_1_floating_point_2_0/design_1_floating_point_1_0_in_context.xdc] for cell 'design_1_i/floating_point_2'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_0/design_1_AND_0_0/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_0/design_1_AND_0_0/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_1/design_1_AND_0_1/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_1'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_1/design_1_AND_0_1/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_1'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_2/design_1_AND_0_2/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_2'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_AND_0_2/design_1_AND_0_2/design_1_AND_0_0_in_context.xdc] for cell 'design_1_i/AND_2'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_3_0/design_1_floating_point_3_0/design_1_floating_point_3_0_in_context.xdc] for cell 'design_1_i/floating_point_3'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_floating_point_3_0/design_1_floating_point_3_0/design_1_floating_point_3_0_in_context.xdc] for cell 'design_1_i/floating_point_3'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_interface_fft_vco_0_0/design_1_adc_interface_fft_vco_0_0/design_1_adc_interface_fft_vco_0_0_in_context.xdc] for cell 'design_1_i/adc_interface_fft_vco_0'
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.gen/sources_1/bd/design_1/ip/design_1_adc_interface_fft_vco_0_0/design_1_adc_interface_fft_vco_0_0/design_1_adc_interface_fft_vco_0_0_in_context.xdc] for cell 'design_1_i/adc_interface_fft_vco_0'
+Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1149 ; free virtual = 28796
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1149 ; free virtual = 28796
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1213 ; free virtual = 28862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1213 ; free virtual = 28862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/adc_data_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/vco_interface_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xfft_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/floating_point_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/floating_point_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/floating_point_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AND_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AND_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AND_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/floating_point_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/adc_interface_fft_vco_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1216 ; free virtual = 28865
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1216 ; free virtual = 28866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1203 ; free virtual = 28862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1045 ; free virtual = 28714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1045 ; free virtual = 28714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1035 ; free virtual = 28705
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |design_1_AND_0_0                   |         1|
+|2     |design_1_AND_0_1                   |         1|
+|3     |design_1_AND_0_2                   |         1|
+|4     |design_1_adc_data_gen_0_0          |         1|
+|5     |design_1_adc_interface_fft_vco_0_0 |         1|
+|6     |design_1_floating_point_0_0        |         1|
+|7     |design_1_floating_point_1_0        |         1|
+|8     |design_1_floating_point_2_0        |         1|
+|9     |design_1_floating_point_3_0        |         1|
+|10    |design_1_vco_interface_0_0         |         1|
+|11    |design_1_xfft_0_0                  |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |design_1_AND_0                   |     3|
+|4     |design_1_adc_data_gen_0          |     1|
+|5     |design_1_adc_interface_fft_vco_0 |     1|
+|6     |design_1_floating_point_0        |     1|
+|7     |design_1_floating_point_1        |     1|
+|8     |design_1_floating_point_2        |     1|
+|9     |design_1_floating_point_3        |     1|
+|10    |design_1_vco_interface_0         |     1|
+|11    |design_1_xfft_0                  |     1|
+|12    |IBUF                             |     2|
+|13    |OBUF                             |   192|
++------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1031 ; free virtual = 28701
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1083 ; free virtual = 28753
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1083 ; free virtual = 28753
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1074 ; free virtual = 28749
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1106 ; free virtual = 28783
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: c603fed4
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 2700.039 ; gain = 0.000 ; free physical = 1291 ; free virtual = 28968
+INFO: [Common 17-1381] The checkpoint '/home/selaka/selaka_deemantha/SELAKA/UNI/FYP/fft_log_ieee_calculation/simulation_project/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 29 00:49:23 2025...

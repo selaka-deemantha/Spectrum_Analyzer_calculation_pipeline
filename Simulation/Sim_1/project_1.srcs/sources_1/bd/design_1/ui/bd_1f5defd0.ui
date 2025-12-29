@@ -1,0 +1,94 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.436424",
+   "Default View_TopLeft":"2550,410",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
+preplace port port-id_Reset -pg 1 -lvl 0 -x -40 -y 30 -defaultsOSRD
+preplace port port-id_o_vco_le_0 -pg 1 -lvl 10 -x 4050 -y 60 -defaultsOSRD
+preplace port port-id_o_vco_clk_0 -pg 1 -lvl 10 -x 4050 -y 80 -defaultsOSRD
+preplace port port-id_o_vco_data_0 -pg 1 -lvl 10 -x 4050 -y 100 -defaultsOSRD
+preplace port port-id_window_normal_tlast -pg 1 -lvl 10 -x 4050 -y -50 -defaultsOSRD
+preplace port port-id_window_normal_tvalid -pg 1 -lvl 10 -x 4050 -y -120 -defaultsOSRD
+preplace port port-id_window_normal_tready -pg 1 -lvl 10 -x 4050 -y -70 -defaultsOSRD
+preplace port port-id_fft_power_tlast -pg 1 -lvl 10 -x 4050 -y 610 -defaultsOSRD
+preplace port port-id_fft_power_tvalid -pg 1 -lvl 10 -x 4050 -y 650 -defaultsOSRD
+preplace port port-id_window_ieee_tlast -pg 1 -lvl 10 -x 4050 -y 820 -defaultsOSRD
+preplace port port-id_window_ieee_tready -pg 1 -lvl 10 -x 4050 -y 840 -defaultsOSRD
+preplace port port-id_window_ieee_tvalid -pg 1 -lvl 10 -x 4050 -y 860 -defaultsOSRD
+preplace port port-id_fft_tlast -pg 1 -lvl 10 -x 4050 -y 410 -defaultsOSRD
+preplace port port-id_fft_tready -pg 1 -lvl 10 -x 4050 -y 530 -defaultsOSRD
+preplace port port-id_fft_tvalid -pg 1 -lvl 10 -x 4050 -y 460 -defaultsOSRD
+preplace portBus state_out -pg 1 -lvl 10 -x 4050 -y 170 -defaultsOSRD
+preplace portBus window_normal_tdata -pg 1 -lvl 10 -x 4050 -y -90 -defaultsOSRD
+preplace portBus fft_power_tdata -pg 1 -lvl 10 -x 4050 -y 630 -defaultsOSRD
+preplace portBus window_ieee_tdata -pg 1 -lvl 10 -x 4050 -y 370 -defaultsOSRD
+preplace portBus fft_tdata -pg 1 -lvl 10 -x 4050 -y 390 -defaultsOSRD
+preplace portBus sample_count_out -pg 1 -lvl 10 -x 4050 -y 500 -defaultsOSRD
+preplace inst adc_data_gen_0 -pg 1 -lvl 1 -x 360 -y 140 -defaultsOSRD
+preplace inst vco_interface_0 -pg 1 -lvl 7 -x 2850 -y -50 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 6 -x 2290 -y 500 -defaultsOSRD
+preplace inst floating_point_0 -pg 1 -lvl 3 -x 1290 -y 410 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 5 -x 1890 -y 360 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 4 -x 1660 -y 410 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 5 -x 1890 -y 590 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 5 -x 1890 -y 690 -defaultsOSRD
+preplace inst floating_point_1 -pg 1 -lvl 8 -x 3390 -y 610 -defaultsOSRD
+preplace inst floating_point_2 -pg 1 -lvl 8 -x 3390 -y 990 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 7 -x 2850 -y 210 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 7 -x 2850 -y 110 -defaultsOSRD
+preplace inst AND_0 -pg 1 -lvl 7 -x 2850 -y 350 -defaultsOSRD -orient R180
+preplace inst AND_1 -pg 1 -lvl 7 -x 2850 -y 590 -defaultsOSRD -orient R180
+preplace inst AND_2 -pg 1 -lvl 7 -x 2850 -y 470 -defaultsOSRD -orient R180
+preplace inst floating_point_3 -pg 1 -lvl 9 -x 3780 -y 610 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 9 -x 3780 -y 760 -defaultsOSRD
+preplace inst adc_interface_fft_vco_0 -pg 1 -lvl 2 -x 780 -y 420 -defaultsOSRD
+preplace inst floating_point_4 -pg 1 -lvl 7 -x 2850 -y 1280 -defaultsOSRD
+preplace netloc adc_data_gen_0_o_adc_data 1 1 1 510J 140n
+preplace netloc clk_1 1 0 9 -20 80 520 560 1080 520 N 520 N 520 2050 330 2570 700 3070 760 3590
+preplace netloc Reset_1 1 0 7 NJ 30 530 -40 N -40 N -40 N -40 N -40 N
+preplace netloc adc_interface_fft_vco_0_o_adc_vco_req_next_freq 1 2 5 1010 100 N 100 N 100 N 100 2560
+preplace netloc vco_interface_0_o_vco_prog_done 1 1 7 540 -170 NJ -170 N -170 N -170 N -170 N -170 3020
+preplace netloc vco_interface_0_o_vco_freq 1 1 7 540 750 NJ 750 N 750 N 750 N 750 N 750 3030
+preplace netloc vco_interface_0_o_vco_le 1 7 3 N -90 N -90 3990
+preplace netloc vco_interface_0_o_vco_clk 1 7 3 N -70 N -70 3960
+preplace netloc vco_interface_0_o_vco_data 1 7 3 N -50 N -50 3950
+preplace netloc adc_interface_fft_vco_0_state_out 1 2 8 1070J 300 NJ 300 1760 280 2010 270 2550 -150 3100 170 N 170 N
+preplace netloc xlconstant_0_dout 1 4 1 1760 370n
+preplace netloc xlconcat_0_dout 1 5 1 2030 360n
+preplace netloc xlconstant_1_dout 1 5 1 2040 530n
+preplace netloc xlconstant_2_dout 1 5 2 2020 -60 N
+preplace netloc xlslice_1_Dout 1 7 1 3090 110n
+preplace netloc xlslice_0_Dout 1 7 1 3060 210n
+preplace netloc floating_point_1_s_axis_a_tready 1 7 1 3080 340n
+preplace netloc floating_point_1_s_axis_b_tready 1 7 1 3070 360n
+preplace netloc floating_point_2_s_axis_a_tready 1 7 1 3050 580n
+preplace netloc floating_point_2_s_axis_b_tready 1 7 1 3040 600n
+preplace netloc AND_0_tready_out 1 6 2 2590 50 3020
+preplace netloc AND_1_tready_out 1 6 2 2590 660 3020
+preplace netloc adc_interface_fft_vco_0_m_axis_tdata 1 2 8 1040J -220 NJ -220 NJ -220 NJ -220 NJ -220 NJ -220 NJ -220 4030J
+preplace netloc adc_interface_fft_vco_0_m_axis_tlast 1 2 8 1030J -210 NJ -210 NJ -210 NJ -210 NJ -210 NJ -210 NJ -210 4010J
+preplace netloc adc_interface_fft_vco_0_m_axis_tvalid 1 2 8 1020J -200 NJ -200 NJ -200 NJ -200 NJ -200 NJ -200 NJ -200 4020J
+preplace netloc floating_point_0_s_axis_a_tready 1 2 8 1050 -180 NJ -180 NJ -180 NJ -180 NJ -180 NJ -180 NJ -180 4000J
+preplace netloc xlconstant_3_dout 1 9 1 3960 630n
+preplace netloc floating_point_3_m_axis_result_tdata 1 9 1 3980 590n
+preplace netloc floating_point_3_m_axis_result_tlast 1 9 1 N 610
+preplace netloc floating_point_3_m_axis_result_tvalid 1 9 1 N 650
+preplace netloc floating_point_0_m_axis_result_tdata 1 3 7 1520J 350 1770J 290 2050J 280 NJ 280 NJ 280 NJ 280 3970J
+preplace netloc floating_point_0_m_axis_result_tlast 1 3 7 1520J 470 NJ 470 2040J 340 2530J 820 NJ 820 NJ 820 NJ
+preplace netloc xfft_0_s_axis_data_tready 1 3 7 1510 480 N 480 2060 840 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc floating_point_0_m_axis_result_tvalid 1 3 7 1500J 490 NJ 490 2030J 770 NJ 770 NJ 770 3570J 860 NJ
+preplace netloc xfft_0_m_axis_data_tdata 1 6 4 2540J -190 NJ -190 NJ -190 3980J
+preplace netloc xfft_0_m_axis_data_tlast 1 6 4 2540J 670 3100J 410 NJ 410 NJ
+preplace netloc AND_2_tready_out 1 6 4 2580 270 NJ 270 NJ 270 3960J
+preplace netloc xfft_0_m_axis_data_tvalid 1 6 4 2520J 680 3080J 830 NJ 830 4000J
+preplace netloc adc_interface_fft_vco_0_sample_count_out 1 2 8 1060J 290 NJ 290 1750J 270 2000J 260 2530J -160 3110J 370 NJ 370 3950J
+preplace netloc floating_point_1_M_AXIS_RESULT 1 8 1 3570 590n
+preplace netloc floating_point_2_M_AXIS_RESULT 1 8 1 3580 610n
+levelinfo -pg 1 -40 360 780 1290 1660 1890 2290 2850 3390 3780 4050
+pagesize -pg 1 -db -bbox -sgen -130 -230 4300 1370
+"
+}
+
