@@ -24,10 +24,14 @@ with open(filename, "r") as f:
 
         # Big-endian IEEE-754 float (Xilinx AXI FFT)
         value = struct.unpack('>f', raw.to_bytes(4, byteorder='big'))[0]
+        
 
         fft_power.append(value)
 
 fft_power = np.array(fft_power)
+
+for i in range(1024):
+        print(fft_power[i])
 
 print("Total FFT samples:", len(fft_power))
 
@@ -46,6 +50,7 @@ freq_axis = np.arange(half_len) * (Fs / N) / 1e6
 # Convert to dB
 # ----------------------------
 fft_db = 10 * np.log10(fft_power_half + 1e-12)
+print(max(fft_power_half))
 
 # ----------------------------
 # Plot 1: Linear power

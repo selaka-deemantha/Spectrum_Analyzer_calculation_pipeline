@@ -1,0 +1,988 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8ED53A6407ED203",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "AND_0": "",
+      "AND_1": "",
+      "AND_2": "",
+      "adc_data_gen_0": "",
+      "adc_interface_fft_vco_0": "",
+      "floating_point_0": "",
+      "floating_point_1": "",
+      "floating_point_2": "",
+      "floating_point_3": "",
+      "vco_interface_0": "",
+      "xfft_0": "",
+      "xlconcat_0": "",
+      "xlconstant_0": "",
+      "xlconstant_1": "",
+      "xlconstant_2": "",
+      "xlconstant_3": "",
+      "xlslice_0": "",
+      "xlslice_1": ""
+    },
+    "ports": {
+      "Reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "fft_power_tdata": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "fft_power_tlast": {
+        "direction": "O"
+      },
+      "fft_power_tvalid": {
+        "direction": "O"
+      },
+      "fft_tdata": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "fft_tlast": {
+        "direction": "O"
+      },
+      "fft_tready": {
+        "direction": "O"
+      },
+      "fft_tvalid": {
+        "direction": "O"
+      },
+      "o_vco_clk_0": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_vco_interface_0_0_o_vco_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "o_vco_data_0": {
+        "direction": "O"
+      },
+      "o_vco_le_0": {
+        "direction": "O"
+      },
+      "sample_count_out": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "state_out": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "window_ieee_tdata": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "window_ieee_tlast": {
+        "direction": "O"
+      },
+      "window_ieee_tready": {
+        "direction": "O"
+      },
+      "window_ieee_tvalid": {
+        "direction": "O"
+      },
+      "window_normal_tdata": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "window_normal_tlast": {
+        "direction": "O"
+      },
+      "window_normal_tready": {
+        "direction": "O"
+      },
+      "window_normal_tvalid": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "AND_0": {
+        "vlnv": "xilinx.com:module_ref:AND:1.0",
+        "xci_name": "design_1_AND_0_0",
+        "xci_path": "ip/design_1_AND_0_0/design_1_AND_0_0.xci",
+        "inst_hier_path": "AND_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AND",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "tready_1": {
+            "direction": "I"
+          },
+          "tready_2": {
+            "direction": "I"
+          },
+          "tready_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "AND_1": {
+        "vlnv": "xilinx.com:module_ref:AND:1.0",
+        "xci_name": "design_1_AND_1_0",
+        "xci_path": "ip/design_1_AND_1_0/design_1_AND_1_0.xci",
+        "inst_hier_path": "AND_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AND",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "tready_1": {
+            "direction": "I"
+          },
+          "tready_2": {
+            "direction": "I"
+          },
+          "tready_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "AND_2": {
+        "vlnv": "xilinx.com:module_ref:AND:1.0",
+        "xci_name": "design_1_AND_2_0",
+        "xci_path": "ip/design_1_AND_2_0/design_1_AND_2_0.xci",
+        "inst_hier_path": "AND_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AND",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "tready_1": {
+            "direction": "I"
+          },
+          "tready_2": {
+            "direction": "I"
+          },
+          "tready_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "adc_data_gen_0": {
+        "vlnv": "xilinx.com:module_ref:adc_data_gen:1.0",
+        "xci_name": "design_1_adc_data_gen_0_0",
+        "xci_path": "ip/design_1_adc_data_gen_0_0/design_1_adc_data_gen_0_0.xci",
+        "inst_hier_path": "adc_data_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "adc_data_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_adc_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "o_adc_data": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "adc_interface_fft_vco_0": {
+        "vlnv": "xilinx.com:module_ref:adc_interface_fft_vco:1.0",
+        "xci_name": "design_1_adc_interface_fft_vco_0_0",
+        "xci_path": "ip/design_1_adc_interface_fft_vco_0_0/design_1_adc_interface_fft_vco_0_0.xci",
+        "inst_hier_path": "adc_interface_fft_vco_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "adc_interface_fft_vco",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "4",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "m_axis_tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_tready",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "i_adc_reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "i_adc_dco": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_adc_data": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "i_adc_vco_prog_done": {
+            "direction": "I"
+          },
+          "i_adc_vco_prog_freq": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "o_adc_vco_req_next_freq": {
+            "direction": "O"
+          },
+          "o_adc_vco_prog_freq": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          },
+          "state_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "sample_count_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "floating_point_0": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "design_1_floating_point_0_0",
+        "xci_path": "ip/design_1_floating_point_0_0/design_1_floating_point_0_0.xci",
+        "inst_hier_path": "floating_point_0",
+        "parameters": {
+          "C_Accum_Input_Msb": {
+            "value": "32"
+          },
+          "C_Accum_Lsb": {
+            "value": "-31"
+          },
+          "C_Accum_Msb": {
+            "value": "32"
+          },
+          "C_Latency": {
+            "value": "7"
+          },
+          "C_Mult_Usage": {
+            "value": "No_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Has_A_TLAST": {
+            "value": "true"
+          },
+          "Operation_Type": {
+            "value": "Fixed_to_float"
+          },
+          "RESULT_TLAST_Behv": {
+            "value": "Pass_A_TLAST"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "floating_point_1": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "design_1_floating_point_1_0",
+        "xci_path": "ip/design_1_floating_point_1_0/design_1_floating_point_1_0.xci",
+        "inst_hier_path": "floating_point_1",
+        "parameters": {
+          "C_Latency": {
+            "value": "9"
+          },
+          "C_Mult_Usage": {
+            "value": "Full_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Has_A_TLAST": {
+            "value": "true"
+          },
+          "Operation_Type": {
+            "value": "Multiply"
+          },
+          "RESULT_TLAST_Behv": {
+            "value": "Pass_A_TLAST"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "floating_point_2": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "design_1_floating_point_2_0",
+        "xci_path": "ip/design_1_floating_point_2_0/design_1_floating_point_2_0.xci",
+        "inst_hier_path": "floating_point_2",
+        "parameters": {
+          "C_Latency": {
+            "value": "9"
+          },
+          "C_Mult_Usage": {
+            "value": "Full_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Has_A_TLAST": {
+            "value": "true"
+          },
+          "Operation_Type": {
+            "value": "Multiply"
+          },
+          "RESULT_TLAST_Behv": {
+            "value": "Pass_A_TLAST"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "floating_point_3": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "design_1_floating_point_3_0",
+        "xci_path": "ip/design_1_floating_point_3_0/design_1_floating_point_3_0.xci",
+        "inst_hier_path": "floating_point_3",
+        "parameters": {
+          "Add_Sub_Value": {
+            "value": "Add"
+          },
+          "Has_A_TLAST": {
+            "value": "true"
+          },
+          "Has_B_TLAST": {
+            "value": "true"
+          },
+          "RESULT_TLAST_Behv": {
+            "value": "AND_all_TLASTs"
+          }
+        }
+      },
+      "vco_interface_0": {
+        "vlnv": "xilinx.com:module_ref:vco_interface:1.0",
+        "xci_name": "design_1_vco_interface_0_0",
+        "xci_path": "ip/design_1_vco_interface_0_0/design_1_vco_interface_0_0.xci",
+        "inst_hier_path": "vco_interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vco_interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_vco_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_vco_start": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "i_next_freq_req": {
+            "direction": "I"
+          },
+          "o_vco_le": {
+            "direction": "O"
+          },
+          "o_vco_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "o_vco_data": {
+            "direction": "O"
+          },
+          "o_vco_prog_done": {
+            "direction": "O"
+          },
+          "o_vco_freq": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          }
+        }
+      },
+      "xfft_0": {
+        "vlnv": "xilinx.com:ip:xfft:9.1",
+        "xci_name": "design_1_xfft_0_0",
+        "xci_path": "ip/design_1_xfft_0_0/design_1_xfft_0_0.xci",
+        "inst_hier_path": "xfft_0",
+        "parameters": {
+          "data_format": {
+            "value": "floating_point"
+          },
+          "number_of_stages_using_block_ram_for_data_and_phase_factors": {
+            "value": "3"
+          },
+          "output_ordering": {
+            "value": "natural_order"
+          },
+          "phase_factor_width": {
+            "value": "24"
+          },
+          "target_clock_frequency": {
+            "value": "100"
+          },
+          "target_data_throughput": {
+            "value": "100"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "design_1_xlconcat_0_0",
+        "xci_path": "ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "32"
+          },
+          "IN1_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_0",
+        "xci_path": "ip/design_1_xlconstant_1_0/design_1_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_2_0",
+        "xci_path": "ip/design_1_xlconstant_2_0/design_1_xlconstant_2_0.xci",
+        "inst_hier_path": "xlconstant_2"
+      },
+      "xlconstant_3": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_3_0",
+        "xci_path": "ip/design_1_xlconstant_3_0/design_1_xlconstant_3_0.xci",
+        "inst_hier_path": "xlconstant_3"
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_0_0",
+        "xci_path": "ip/design_1_xlslice_0_0/design_1_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "63"
+          },
+          "DIN_TO": {
+            "value": "32"
+          },
+          "DIN_WIDTH": {
+            "value": "64"
+          },
+          "DOUT_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_1_0",
+        "xci_path": "ip/design_1_xlslice_1_0/design_1_xlslice_1_0.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_WIDTH": {
+            "value": "64"
+          },
+          "DOUT_WIDTH": {
+            "value": "32"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "floating_point_1_M_AXIS_RESULT": {
+        "interface_ports": [
+          "floating_point_1/M_AXIS_RESULT",
+          "floating_point_3/S_AXIS_A"
+        ]
+      },
+      "floating_point_2_M_AXIS_RESULT": {
+        "interface_ports": [
+          "floating_point_2/M_AXIS_RESULT",
+          "floating_point_3/S_AXIS_B"
+        ]
+      }
+    },
+    "nets": {
+      "AND_0_tready_out": {
+        "ports": [
+          "AND_0/tready_out",
+          "AND_2/tready_2"
+        ]
+      },
+      "AND_1_tready_out": {
+        "ports": [
+          "AND_1/tready_out",
+          "AND_2/tready_1"
+        ]
+      },
+      "AND_2_tready_out": {
+        "ports": [
+          "AND_2/tready_out",
+          "fft_tready",
+          "xfft_0/m_axis_data_tready"
+        ]
+      },
+      "Reset_1": {
+        "ports": [
+          "Reset",
+          "adc_interface_fft_vco_0/i_adc_reset",
+          "vco_interface_0/reset"
+        ]
+      },
+      "adc_data_gen_0_o_adc_data": {
+        "ports": [
+          "adc_data_gen_0/o_adc_data",
+          "adc_interface_fft_vco_0/i_adc_data"
+        ]
+      },
+      "adc_interface_fft_vco_0_m_axis_tdata": {
+        "ports": [
+          "adc_interface_fft_vco_0/m_axis_tdata",
+          "window_normal_tdata",
+          "floating_point_0/s_axis_a_tdata"
+        ]
+      },
+      "adc_interface_fft_vco_0_m_axis_tlast": {
+        "ports": [
+          "adc_interface_fft_vco_0/m_axis_tlast",
+          "window_normal_tlast",
+          "floating_point_0/s_axis_a_tlast"
+        ]
+      },
+      "adc_interface_fft_vco_0_m_axis_tvalid": {
+        "ports": [
+          "adc_interface_fft_vco_0/m_axis_tvalid",
+          "window_normal_tvalid",
+          "floating_point_0/s_axis_a_tvalid"
+        ]
+      },
+      "adc_interface_fft_vco_0_o_adc_vco_req_next_freq": {
+        "ports": [
+          "adc_interface_fft_vco_0/o_adc_vco_req_next_freq",
+          "vco_interface_0/i_next_freq_req"
+        ]
+      },
+      "adc_interface_fft_vco_0_sample_count_out": {
+        "ports": [
+          "adc_interface_fft_vco_0/sample_count_out",
+          "sample_count_out"
+        ]
+      },
+      "adc_interface_fft_vco_0_state_out": {
+        "ports": [
+          "adc_interface_fft_vco_0/state_out",
+          "state_out"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "adc_data_gen_0/i_adc_clk",
+          "adc_interface_fft_vco_0/i_adc_dco",
+          "floating_point_0/aclk",
+          "floating_point_1/aclk",
+          "floating_point_2/aclk",
+          "floating_point_3/aclk",
+          "vco_interface_0/i_vco_clk",
+          "xfft_0/aclk"
+        ]
+      },
+      "floating_point_0_m_axis_result_tdata": {
+        "ports": [
+          "floating_point_0/m_axis_result_tdata",
+          "window_ieee_tdata",
+          "xlconcat_0/In0"
+        ]
+      },
+      "floating_point_0_m_axis_result_tlast": {
+        "ports": [
+          "floating_point_0/m_axis_result_tlast",
+          "window_ieee_tlast",
+          "xfft_0/s_axis_data_tlast"
+        ]
+      },
+      "floating_point_0_m_axis_result_tvalid": {
+        "ports": [
+          "floating_point_0/m_axis_result_tvalid",
+          "window_ieee_tvalid",
+          "xfft_0/s_axis_data_tvalid"
+        ]
+      },
+      "floating_point_0_s_axis_a_tready": {
+        "ports": [
+          "floating_point_0/s_axis_a_tready",
+          "window_normal_tready",
+          "adc_interface_fft_vco_0/m_axis_tready"
+        ]
+      },
+      "floating_point_1_s_axis_a_tready": {
+        "ports": [
+          "floating_point_1/s_axis_a_tready",
+          "AND_0/tready_2"
+        ]
+      },
+      "floating_point_1_s_axis_b_tready": {
+        "ports": [
+          "floating_point_1/s_axis_b_tready",
+          "AND_0/tready_1"
+        ]
+      },
+      "floating_point_2_s_axis_a_tready": {
+        "ports": [
+          "floating_point_2/s_axis_a_tready",
+          "AND_1/tready_2"
+        ]
+      },
+      "floating_point_2_s_axis_b_tready": {
+        "ports": [
+          "floating_point_2/s_axis_b_tready",
+          "AND_1/tready_1"
+        ]
+      },
+      "floating_point_3_m_axis_result_tdata": {
+        "ports": [
+          "floating_point_3/m_axis_result_tdata",
+          "fft_power_tdata"
+        ]
+      },
+      "floating_point_3_m_axis_result_tlast": {
+        "ports": [
+          "floating_point_3/m_axis_result_tlast",
+          "fft_power_tlast"
+        ]
+      },
+      "floating_point_3_m_axis_result_tvalid": {
+        "ports": [
+          "floating_point_3/m_axis_result_tvalid",
+          "fft_power_tvalid"
+        ]
+      },
+      "vco_interface_0_o_vco_clk": {
+        "ports": [
+          "vco_interface_0/o_vco_clk",
+          "o_vco_clk_0"
+        ]
+      },
+      "vco_interface_0_o_vco_data": {
+        "ports": [
+          "vco_interface_0/o_vco_data",
+          "o_vco_data_0"
+        ]
+      },
+      "vco_interface_0_o_vco_freq": {
+        "ports": [
+          "vco_interface_0/o_vco_freq",
+          "adc_interface_fft_vco_0/i_adc_vco_prog_freq"
+        ]
+      },
+      "vco_interface_0_o_vco_le": {
+        "ports": [
+          "vco_interface_0/o_vco_le",
+          "o_vco_le_0"
+        ]
+      },
+      "vco_interface_0_o_vco_prog_done": {
+        "ports": [
+          "vco_interface_0/o_vco_prog_done",
+          "adc_interface_fft_vco_0/i_adc_vco_prog_done"
+        ]
+      },
+      "xfft_0_m_axis_data_tdata": {
+        "ports": [
+          "xfft_0/m_axis_data_tdata",
+          "fft_tdata",
+          "xlslice_0/Din",
+          "xlslice_1/Din"
+        ]
+      },
+      "xfft_0_m_axis_data_tlast": {
+        "ports": [
+          "xfft_0/m_axis_data_tlast",
+          "fft_tlast",
+          "floating_point_1/s_axis_a_tlast",
+          "floating_point_2/s_axis_a_tlast"
+        ]
+      },
+      "xfft_0_m_axis_data_tvalid": {
+        "ports": [
+          "xfft_0/m_axis_data_tvalid",
+          "fft_tvalid",
+          "floating_point_1/s_axis_a_tvalid",
+          "floating_point_1/s_axis_b_tvalid",
+          "floating_point_2/s_axis_a_tvalid",
+          "floating_point_2/s_axis_b_tvalid"
+        ]
+      },
+      "xfft_0_s_axis_data_tready": {
+        "ports": [
+          "xfft_0/s_axis_data_tready",
+          "window_ieee_tready",
+          "floating_point_0/m_axis_result_tready"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "xfft_0/s_axis_data_tdata"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "xfft_0/s_axis_config_tdata"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "vco_interface_0/i_vco_start",
+          "xfft_0/s_axis_config_tvalid"
+        ]
+      },
+      "xlconstant_3_dout": {
+        "ports": [
+          "xlconstant_3/dout",
+          "floating_point_3/m_axis_result_tready"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "floating_point_2/s_axis_a_tdata",
+          "floating_point_2/s_axis_b_tdata"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "floating_point_1/s_axis_a_tdata",
+          "floating_point_1/s_axis_b_tdata"
+        ]
+      }
+    }
+  }
+}
