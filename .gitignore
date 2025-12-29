@@ -1,14 +1,15 @@
-**/.Xil/
-**/.gen/
-**/.hw/
-**/.ip_user_files/
-**/.sim/
-**/.runs/
-**/.xpr/
+Simulation/Sim_1/project_1.Xil
+Simulation/Sim_1/project_1.gen
+Simulation/Sim_1/project_1.cache
+Simulation/Sim_1/project_1.hw
+Simulation/Sim_1/project_1.ip_user_files
+Simulation/Sim_1/project_1.sim
+Simulation/Sim_1/project_1.runs
+Simulation/Sim_1/project_1.xpr
 
-**/*.log
-**/*.jou
-**/*.str
+Simulation/Sim_1/*.log
+Simulation/Sim_1/*.jou
+Simulation/Sim_1/*.str
 
 Simulation/Sim_1/project_1_def_val.txt
 Simulation/Sim_1/project_1_dump.txt
