@@ -37,37 +37,40 @@ assign first_beat_done_out = first_beat_done;
 
 always @(posedge clk) begin
     if (!rstn) begin
-        first_beat_done <= 1'b0;
-        m_axis_tvalid   <= 1'b0;
-        m_axis_tlast    <= 1'b0;
-        first_beat      <= 1'b0;
+        first_beat_done                     <= 0;
+        m_axis_tvalid                       <= 0;
+        m_axis_tlast                        <= 0;
+        
+    
     end
     else begin
-        m_axis_tvalid <= s_axis_tvalid;
-        m_axis_tlast  <= s_axis_tlast;
-        first_beat    <= 1'b0;
-
-        if (s_axis_tvalid && s_axis_tready) begin
-
-            // reset at end of packet
-            if (s_axis_tlast) begin
-                first_beat_done <= 1'b0;
+        m_axis_tvalid                       <= s_axis_tvalid;
+        m_axis_tlast                        <= s_axis_tlast;
+        
+        first_beat                          <= 0;
+        
+        if (s_axis_tready & s_axis_tvalid) begin
+            if (!first_beat_done & REPLACE_FIRST_BEAT_EN) begin
+                m_axis_tdata                    <= {{(AXIS_DATA_WIDTH-REPLACER_DATA_WIDTH){1'b0}}, replacer_input};
+                first_beat_done                 <= 1;
+                first_beat                      <= 1;
             end
-            // replace only the very first beat
-            else if (!first_beat_done && REPLACE_FIRST_BEAT_EN) begin
-                m_axis_tdata    <= {{(AXIS_DATA_WIDTH-REPLACER_DATA_WIDTH){1'b0}},
-                                      replacer_input};
-                first_beat_done <= 1'b1;
-                first_beat      <= 1'b1;
+            else if(s_axis_tlast == 1) begin
+                first_beat_done                 <= 0;
+                first_beat                      <= 0;
+                m_axis_tdata                    <= s_axis_tdata;
             end
-            // normal pass-through
             else begin
-                m_axis_tdata <= s_axis_tdata;
+                first_beat_done                 <= first_beat_done;
+                first_beat                      <= 0;
+                m_axis_tdata                    <= s_axis_tdata;
             end
-
+    
         end
+
     end
 end
 
 
 endmodule
+
